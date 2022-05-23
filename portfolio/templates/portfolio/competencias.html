@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'portfolio/layout.html' %}
+    <meta charset="UTF-8">
+    <title>Competências</title>
+</head>
+
+{% block main %}
+    <h3>Competências</h3>
+    <p>
+        texto texto texto
+        <br>
+        {% load static %}
+        <img src="{% static 'portfolio/images/image.png' %}">
+    </p>
+{% endblock %}
+
+</body>
+</html>
