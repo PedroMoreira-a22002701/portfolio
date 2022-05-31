@@ -84,7 +84,7 @@ header {
 }
 .projectos > div {
 
-    background-color: #888888;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
@@ -101,7 +101,7 @@ header {
 
 .projectos div div:last-child {
 
-    width: 150px;
+    width: 300px;
     background-color: white;
     padding: 20px;
     border-radius: 0 20px 20px 0;
