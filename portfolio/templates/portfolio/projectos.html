@@ -1,13 +1,24 @@
 {% extends 'portfolio/layout.html' %}
+{% load static %}
 {% block main %}
-    <div class="HeroImage">
+<link rel="stylesheet" href="{% static 'portfolio/css/projectos.css' %}">
         <h1>Projectos</h1>
         <div class="projectos">
-            <h2>Tabuleiro de Xadrez</h2>
-
-            
-
-
+            <div>
+                <div><img src="{% static 'portfolio/images/xadrez.png' %}"></div>
+                <h2>Tabuleiro de Xadrez</h2>
+                
+            </div>
+            <div>
+                <div><img src="{% static 'portfolio/images/regador.jpg' %}"></div>
+                <h2>Regador Automático</h2>
+                
+                
+            </div>
+            <div>
+                <div><img src="{% static 'portfolio/images/deisi.png' %}"></div>
+                <h2>DEISI GREAT GAME</h2>
+            </div>    
         </div>
     </div>
 {% endblock %}
