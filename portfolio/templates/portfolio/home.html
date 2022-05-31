@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% extends 'portfolio/layout.html' %}
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-
+{% extends 'portfolio/layout.html' %}
+{% load static %}
 {% block main %}
+<link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
     <h3>Home</h3>
     <p>
         texto texto texto
@@ -15,6 +10,3 @@
         <img src="{% static 'portfolio/images/image.png' %}">
     </p>
 {% endblock %}
-
-</body>
-</html>
