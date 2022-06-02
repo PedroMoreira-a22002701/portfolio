@@ -1,0 +1,13 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block main %}
+<link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}">
+    {% for post in portfolio %}
+        <p>
+            {{post.autor}}
+            {{post.titulo}}
+            {{post.descricao}}
+            {{post.data}}
+        <p>
+    {% endfor %}            
+{% endblock %}
