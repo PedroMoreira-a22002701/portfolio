@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
 from .forms import PostForm
+from django.urls import reverse
 from .models import post
 # Create your views here.
 from django.shortcuts import render
@@ -23,7 +24,9 @@ def licenciatura_page_view(request):
     return render(request, 'portfolio/licenciatura.html')
 def post_page_view(request):
     form = PostForm()
-
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio/blog.html'))
     context = {'form': form}
 
     return render(request, 'portfolio/post.html', context)
