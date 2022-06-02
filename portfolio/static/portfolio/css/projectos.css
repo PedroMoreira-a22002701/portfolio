@@ -16,9 +16,10 @@ h2 {
  color: rgb(15, 82, 140);
 
 }
-body {
-  background-repeat: no-repeat;
+html {
   background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 main {

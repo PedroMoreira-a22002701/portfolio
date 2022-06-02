@@ -11,9 +11,10 @@ h1 {
     color: #ffffff;;;
 
 }
-body {
-  background-repeat: no-repeat;
+html {
   background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 main {

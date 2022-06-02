@@ -3,11 +3,34 @@
 {% block main %}
 <link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}">
     {% for post in portfolio %}
-        <p>
-            {{post.autor}}
-            {{post.titulo}}
-            {{post.descricao}}
-            {{post.data}}
-        <p>
+    <div class="blog">
+        <div>
+            <div>
+                <div class="title">
+                    {{post.titulo}}
+                </div>
+                <div class="description">
+                    {{post.descricao}}
+                </div>    
+                <div class"info">
+
+                    Autor: {{post.autor}}
+                    
+                </div>
+                <div class"info">
+
+                    Data: {{post.data}}
+                    
+                </div>
+            
+          
+            </div>
+        </div>    
+    </div>  
+    <div class="buttons">      
+        <button class"info box">
+            <a href="{% url 'portfolio:post' %}">Novo Post</a>
+        </button>
+    </div>
     {% endfor %}            
 {% endblock %}
