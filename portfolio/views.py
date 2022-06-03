@@ -33,8 +33,8 @@ def post_page_view(request):
     return render(request, 'portfolio/post.html', context)
 
 def quiz_page_view(request):
-    form = PontuacaoQuiz(request.POST or None)
-    
+    form = quizz(request)
+    quizz(request)
     context = {'form': form}
 
     return render(request, 'portfolio/quiz.html', context)
@@ -45,6 +45,7 @@ def quizz(request):
         p = pontuacao_quiz(request)
         r = PontuacaoQuiz(nome=n, pontuacao=p)
         r.save()
+        return r
 def pontuacao_quiz(request):
     count = 0
     if(request.POST('0') == 'HyperText Markup Language'):

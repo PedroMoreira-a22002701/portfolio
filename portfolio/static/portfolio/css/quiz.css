@@ -17,9 +17,10 @@ h2 {
 
 }
 html {
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 main {
@@ -73,7 +74,8 @@ header {
      color: #ffffff;
     align-items: center;
     position: absolute;
-    bottom: 0; 
+    bottom: -10; 
+    background-color: black;
     left: 0; 
     right: 0;
   }

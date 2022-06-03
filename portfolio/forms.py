@@ -10,4 +10,4 @@ class PontuacaoForm(ModelForm):
     class Meta:
         model = PontuacaoQuiz
         fields = '__all__'
-        exclude = ['pontos']    
+           
