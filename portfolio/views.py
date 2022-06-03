@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import PostForm
 from django.urls import reverse
-from .models import post
+
+from .models import post, PontuacaoQuiz
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -23,10 +24,27 @@ def projectos_page_view(request):
 def licenciatura_page_view(request):
     return render(request, 'portfolio/licenciatura.html')
 def post_page_view(request):
-    form = PostForm()
+    form = PostForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('portfolio/blog.html'))
+        return HttpResponseRedirect('blog')
     context = {'form': form}
 
     return render(request, 'portfolio/post.html', context)
+
+def quiz_page_view(request):
+    form = PontuacaoQuiz(request.POST or None)
+    
+    context = {'form': form}
+
+    return render(request, 'portfolio/quiz.html', context)
+    
+def quizz(request):
+    if request.method == 'POST':
+        n = request.POST['nome']
+        p = pontuacao_quiz(request)
+        r = PontuacaoQuiz(nome=n, pontuacao=p)
+        r.save()
+def pontuacao_quiz():
+    count = 0
+    return count

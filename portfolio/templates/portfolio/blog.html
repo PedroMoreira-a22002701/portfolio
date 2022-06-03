@@ -2,8 +2,8 @@
 {% load static %}
 {% block main %}
 <link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}">
+<div class="blog">
     {% for post in portfolio %}
-    <div class="blog">
         <div>
             <div>
                 <div class="title">
@@ -23,14 +23,14 @@
                     
                 </div>
             
-          
+                
             </div>
-        </div>    
-    </div>  
+        </div>        
+    {% endfor %}
+</div> 
     <div class="buttons">      
         <button class"info box">
             <a href="{% url 'portfolio:post' %}">Novo Post</a>
         </button>
-    </div>
-    {% endfor %}            
+    </div>            
 {% endblock %}

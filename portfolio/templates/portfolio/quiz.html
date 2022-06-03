@@ -1,0 +1,85 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block main %}
+<link rel="stylesheet" href="{% static 'portfolio/css/quiz.css' %}">
+<section>
+    <h1>Quiz</h1>
+   
+</section>
+<br>
+<div class="quiz">
+     <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+    
+    
+    <br>
+    <p>
+        O que significa HTML?
+        <br>
+        <input type="radio" name="Hyper Text Preprocessor">
+        <label>Hyper Text Preprocessor</label>
+        <input type="radio" name="Hyper Text Markup Language">
+        <label>Hyper Text Markup Language</label>
+        <input type="radio" name="Hyper Text Multiple Language">
+        <label>Hyper Text Multiple Language</label>
+        <input type="radio" name="Hyper Tool Multi Language">
+        <label>Hyper Tool Multi Language</label>
+    </p>
+    <br>
+    <p>
+        O que significa CSS?
+        <br>
+        <input type="radio" name="1" value="Common Style Sheet" id="Common Style Sheet">
+        <label for="Common Style Sheet">Common Style Sheet</label>
+        <input type="radio" name="pergunta 2" value="Colorful Style Sheet" id="Para evitar cheias">
+        <label for="Para evitar cheias">Colorful Style Sheet</label>
+        <input type="radio" name="pergunta 3" value="Para atrair pessoas abastadas para viver na cidades" id="Para atrair pessoas abastadas para viver na cidade">
+        <label for="Para atrair pessoas abastadas para viver na cidade">Computer Style Sheet</label>
+        <input type="radio" name="pergunta 4" value="Nenhuma das anteriores" id="Nenhuma das anteriores">
+        <label for="Nenhuma das anteriores">Cascading Style Sheet</label>
+    </p>
+    <br>
+    <p>
+        A que propósito foi criado o canal Ring?
+        <br>
+        <input type="radio" name="1" value="Para escoar a água" id="Para escoar a água">
+        <label for="Para escoar a água">Para escoar a água</label>
+        <input type="radio" name="pergunta 2" value="Para evitar cheias" id="Para evitar cheias">
+        <label for="Para evitar cheias">Para evitar cheias</label>
+        <input type="radio" name="pergunta 3" value="Para atrair pessoas abastadas para viver na cidades" id="Para atrair pessoas abastadas para viver na cidade">
+        <label for="Para atrair pessoas abastadas para viver na cidade">Para atrair pessoas abastadas para viver na cidade</label>
+        <input type="radio" name="pergunta 4" value="Nenhuma das anteriores" id="Nenhuma das anteriores">
+        <label for="Nenhuma das anteriores">Nenhuma das anteriores</label>
+    </p>
+    <br>
+    <p>
+        A que propósito foi criado o canal Ring?
+        <br>
+        <input type="radio" name="1" value="Para escoar a água" id="Para escoar a água">
+        <label for="Para escoar a água">Para escoar a água</label>
+        <input type="radio" name="pergunta 2" value="Para evitar cheias" id="Para evitar cheias">
+        <label for="Para evitar cheias">Para evitar cheias</label>
+        <input type="radio" name="pergunta 3" value="Para atrair pessoas abastadas para viver na cidades" id="Para atrair pessoas abastadas para viver na cidade">
+        <label for="Para atrair pessoas abastadas para viver na cidade">Para atrair pessoas abastadas para viver na cidade</label>
+        <input type="radio" name="pergunta 4" value="Nenhuma das anteriores" id="Nenhuma das anteriores">
+        <label for="Nenhuma das anteriores">Nenhuma das anteriores</label>
+    </p>
+    <br>
+    <p>
+        A que propósito foi criado o canal Ring?
+        <br>
+        <input type="radio" name="1" value="Para escoar a água" id="Para escoar a água">
+        <label for="Para escoar a água">Para escoar a água</label>
+        <input type="radio" name="pergunta 2" value="Para evitar cheias" id="Para evitar cheias">
+        <label for="Para evitar cheias">Para evitar cheias</label>
+        <input type="radio" name="pergunta 3" value="Para atrair pessoas abastadas para viver na cidades" id="Para atrair pessoas abastadas para viver na cidade">
+        <label for="Para atrair pessoas abastadas para viver na cidade">Para atrair pessoas abastadas para viver na cidade</label>
+        <input type="radio" name="pergunta 4" value="Nenhuma das anteriores" id="Nenhuma das anteriores">
+        <label for="Nenhuma das anteriores">Nenhuma das anteriores</label>
+    </p>
+    <br>
+    <input type="submit" value="Gravar">
+    
+</div>
+{% endblock %}

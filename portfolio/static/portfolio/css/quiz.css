@@ -21,6 +21,7 @@ html {
   height: 100%;
   overflow: hidden;
 }
+
 main {
   display: grid;
   background-repeat: no-repeat;
@@ -69,67 +70,19 @@ header {
     height: 5vh;
     display: flex;
     justify-content: flex-end;
-    color: #ffffff;
-
+     color: #ffffff;
     align-items: center;
     position: absolute;
     bottom: 0; 
     left: 0; 
     right: 0;
   }
-
-.blog {
-  
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  height: 80%;
-  
- 
+  fieldset {
+      background-color: #ffffff;
+  }
+.quiz {
+    background-color: #ffffff;
+    width: 45%;
+    border-radius: 5px;
+    padding-left: 20px;
 }
-.blog > div {
-
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px #888888;
-  margin: 10px;
-  padding: 20px;
-
-}
-.blog > div .title {
-  color: rgb(8, 141, 212);
-  border-bottom: 1px solid gray;
-  font-size: 25px;
-}
-.blog > div .description {
-  color: rgb(0, 0, 0);
-  border-bottom: 1px solid gray;
-  font-size: 15px;
-}
-.blog > div .info {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-.buttons{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 30px;
-}
-.buttons button{
-  margin: 0 5px;
-  height: 40px;
-  width: 100px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  border: 1px solid #007bff;
-  transition: all 0.3s ease;
-}
-
