@@ -38,13 +38,23 @@ def quiz_page_view(request):
     context = {'form': form}
 
     return render(request, 'portfolio/quiz.html', context)
-    
+
 def quizz(request):
     if request.method == 'POST':
         n = request.POST['nome']
         p = pontuacao_quiz(request)
         r = PontuacaoQuiz(nome=n, pontuacao=p)
         r.save()
-def pontuacao_quiz():
+def pontuacao_quiz(request):
     count = 0
+    if(request.POST('0') == 'HyperText Markup Language'):
+        count = count + 1
+    if(request.POST('1') == 'HyperText Markup Language'):
+        count = count + 1
+    if(request.POST('2') == 'box-shadow: 10px 10px 5px grey;'):
+        count = count + 1    
+    if(request.POST('3') == 'text-wrap: break-word;'):
+        count = count + 1   
+    if(request.POST('4') == 'border-radius: 30px;'):
+        count = count + 1             
     return count
