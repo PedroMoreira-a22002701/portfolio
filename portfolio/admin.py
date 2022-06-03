@@ -3,3 +3,4 @@ from .models import post
 from .models import PontuacaoQuiz
 # Register your models here.
 admin.site.register(post)
+admin.site.register(PontuacaoQuiz)
