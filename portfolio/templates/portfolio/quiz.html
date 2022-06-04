@@ -9,8 +9,11 @@
 <br>
 <div class="quiz">
      <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
+        {% csrf_token %}   
+         <br>
+     Nome:    
+     <input type="text" name="name">   
+     <br>
     <br>
     <p>
         <h3>O que significa HTML?</h3>
@@ -34,14 +37,14 @@
         <input type="radio" name="1" value="Common Style Sheet" id="Common Style Sheet">
         <label for="Common Style Sheet">Common Style Sheet</label>
         <br>
-        <input type="radio" name="1" value="Colorful Style Sheet" id="Para evitar cheias">
-        <label for="Para evitar cheias">Colorful Style Sheet</label>
+        <input type="radio" name="1" value="CounterStrike Source" id="CounterStrike Source">
+        <label for="CounterStrike Source">CounterStrike Source</label>
         <br>
-        <input type="radio" name="1" value="Para atrair pessoas abastadas para viver na cidades" id="Para atrair pessoas abastadas para viver na cidade">
-        <label for="Para atrair pessoas abastadas para viver na cidade">Computer Style Sheet</label>
+        <input type="radio" name="1" value="Computer Style Sheet" id="Computer Style Sheet">
+        <label for="Computer Style Sheet">Computer Style Sheet</label>
         <br>
-        <input type="radio" name="1" value="Nenhuma das anteriores" id="Nenhuma das anteriores">
-        <label for="Nenhuma das anteriores">Cascading Style Sheet</label>
+        <input type="radio" name="1" value="Cascading Style Sheet" id="Cascading Style Sheet">
+        <label for="Cascading Style Sheets">Cascading Style Sheet</label>
     </p>
     <br>
     <p>
@@ -92,7 +95,7 @@
         <label for="alpha-effect: round-corner;">alpha-effect: round-corner;</label>
     </p>
     <br>
-    </form>
+    
     <input type="submit" value="Gravar">
     
 </div>
