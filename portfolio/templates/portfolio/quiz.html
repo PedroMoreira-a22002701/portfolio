@@ -2,11 +2,12 @@
 {% load static %}
 {% block main %}
 <link rel="stylesheet" href="{% static 'portfolio/css/quiz.css' %}">
+<title>Quiz</title>
 <section>
     <h1>Quiz</h1>
    
 </section>
-<br>
+
 <div class="quiz">
      <form method="POST" action="">
         {% csrf_token %}   

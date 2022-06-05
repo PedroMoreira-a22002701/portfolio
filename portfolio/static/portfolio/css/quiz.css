@@ -16,6 +16,9 @@ h2 {
  color: rgb(15, 82, 140);
 
 }
+h3 {
+  color:  rgb(15, 82, 140);
+}
 html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -87,4 +90,5 @@ header {
     width: 45%;
     border-radius: 5px;
     padding-left: 20px;
+    padding-bottom: 20px;
 }

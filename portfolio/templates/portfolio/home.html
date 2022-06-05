@@ -2,11 +2,17 @@
 {% load static %}
 {% block main %}
 <link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
-    <h3>Home</h3>
-    <p>
-        texto texto texto
+    <title>Home</title>
         <br>
-        {% load static %}
-        <img src="{% static 'portfolio/images/image.png' %}">
-    </p>
+        <div class="home">
+            <div>
+               
+                <div><img src="{% static 'portfolio/images/foto.jpg' %}"></div>
+                <div>
+                    <p>Olá, eu sou o Pedro Moreira tenho 20 anos e estou-me a licenciar em Engenharia Informática 
+                        na Universidade Lusófona de Humanidades e Tecnologias.
+                </div>
+            </div>
+        </div>
+    
 {% endblock %}

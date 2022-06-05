@@ -39,12 +39,12 @@ main {
 .cadeiras h3{
   font-family: Sans-serif;
   /* color:#b50000;*/
-  color:#2c45c1;
+  color: rgb(15, 82, 140);
   font-size: 20px;
 }
 .cadeiras div {
   justify-content: center;
-  background-color: #dedede;
+  background-color: #ffffff;
   opacity: 0.75;
   color: black;
   border-radius: 20px;
