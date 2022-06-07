@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .forms import PostForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
-from .models import post, PontuacaoQuiz
+from .models import post, PontuacaoQuiz, cadeira, projecto
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -20,10 +20,12 @@ def blog_page_view(request):
     return render(request, 'portfolio/blog.html', context)
 
 def projectos_page_view(request):
-    return render(request, 'portfolio/projectos.html')
+    context = {'portfolio': projecto.objects.all()}
+    return render(request, 'portfolio/projectos.html', context)
 
 def licenciatura_page_view(request):
-    return render(request, 'portfolio/licenciatura.html')
+    context = {'portfolio': cadeira.objects.all()}
+    return render(request, 'portfolio/licenciatura.html', context)
 def login_page_view(request):
     if request.method == "POST":
         username = request.POST['username']

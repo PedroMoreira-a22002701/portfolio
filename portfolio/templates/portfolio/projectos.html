@@ -5,30 +5,15 @@
 <title>Projectos</title>
         <h1>Projectos</h1>
         <div class="projectos">
+            {% for projecto in portfolio %}
             <div>
-                <div><img src="{% static 'portfolio/images/xadrez.png' %}"></div>
+                <div><img src="{{projecto.imagem.url}}" ></div>
                 <div>
-                    <h2>Tabuleiro de Xadrez</h2>
-                    <p>Jogo de xadrez programado em Kotlin</p>
-                    <button><a href="https://github.com/PedroMoreira-a22002701/Kotlin-Chess.git">GITHUB</a></button>
+                    <h2>{{projecto.nome}}</h2>
+                    <p>{{projecto.descricao}}</p>
+                    <button><a href="{{projecto.github}}">GITHUB</a></button>
                 </div>
             </div>
-            <div>
-                <div><img src="{% static 'portfolio/images/regador.jpg' %}"></div>
-                <div>
-                    <h2>Regador Automático</h2>
-                    <p>Circuito em Arduino, que simula um regador automático com sensores de humidade e temperatura e um motor</p>
-                
-                </div>
-            </div>
-            <div>
-                <div><img src="{% static 'portfolio/images/deisi.png' %}"></div>
-                <div>
-                    <h2>DEISI GREAT GAME</h2>
-                    <p>Jogo de tabuleiro programado em Java</p>
-                    <button><a href="https://github.com/PedroMoreira-a22002701/deisigreatgame">GITHUB</a></button>
-                </div>
-            </div>    
+            {% endfor %}
         </div>
-    </div>
 {% endblock %}

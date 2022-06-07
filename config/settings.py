@@ -42,8 +42,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'portfolio',
 ]
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': "daalrpr77",
+  'API_KEY': "594339922775168",
+  'API_SECRET': "4zCsu9BYMGS-VuuGh-1O7eUy8ZI",
+}
+
+MEDIA_URL = '/portfolio/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
