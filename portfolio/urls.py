@@ -24,5 +24,7 @@ urlpatterns = [
     path('projectos', views.projectos_page_view, name='projectos'),
     path('licenciatura', views.licenciatura_page_view, name='licenciatura'),
     path('post', views.post_page_view, name='post'),
-    path('quiz', views.quizz, name='quiz')
+    path('quiz', views.quizz, name='quiz'),
+    path('login', views.login_page_view, name='login'),
+    
 ]

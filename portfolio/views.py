@@ -1,8 +1,9 @@
+from imaplib import _Authenticator
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import PostForm
 from django.urls import reverse
-
+from django.contrib.auth import authenticate, login
 from .models import post, PontuacaoQuiz
 # Create your views here.
 from django.shortcuts import render
@@ -23,6 +24,19 @@ def projectos_page_view(request):
 
 def licenciatura_page_view(request):
     return render(request, 'portfolio/licenciatura.html')
+def login_page_view(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username= username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('licenciatura')
+        else:
+            return render(request, "portfolio/login.html", {
+                'message': "Invalid credentials."
+            })
+    return render(request, 'portfolio/login.html')    
     
 def post_page_view(request):
     form = PostForm(request.POST or None)
