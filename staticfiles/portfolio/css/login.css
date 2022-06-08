@@ -7,13 +7,8 @@
 }
   
 h1 {
-    font-size: 50px;
+    font-size: 70px;
     color: #ffffff;;;
-
-}
-h2 {
- font-size: 20px;
- color: rgb(15, 82, 140);
 
 }
 html {
@@ -77,38 +72,3 @@ header {
     left: 0; 
     right: 0;
   }
-.projectos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 50px;
-}
-.projectos > div {
-
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px #888888;
-    margin: 10px;
-    opacity: 0.85;
-
-}
-
-.projectos div img {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-}
-
-.projectos div div:last-child {
-
-    width: 300px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 0 20px 20px 0;
-    display: inline-block;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
