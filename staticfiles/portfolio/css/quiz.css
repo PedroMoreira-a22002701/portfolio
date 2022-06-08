@@ -16,14 +16,10 @@ h2 {
  color: rgb(15, 82, 140);
 
 }
-h3 {
-  color:  rgb(15, 82, 140);
-}
 html {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 main {
@@ -77,8 +73,7 @@ header {
      color: #ffffff;
     align-items: center;
     position: absolute;
-    bottom: -10; 
-    background-color: black;
+    bottom: 0; 
     left: 0; 
     right: 0;
   }
@@ -90,7 +85,4 @@ header {
     width: 45%;
     border-radius: 5px;
     padding-left: 20px;
-    padding-bottom: 20px;
-    opacity: 0.90;
-    box-shadow: 5px 5px 15px #888888;
 }

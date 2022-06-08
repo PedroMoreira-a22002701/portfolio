@@ -73,40 +73,11 @@ header {
     right: 0;
   }
 
-  .home {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 50px;
-}
-.home > div {
 
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
-    opacity: 0.85;
-    box-shadow: 5px 5px 15px #888888;
-   
+.home {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
 
-}
-
-.home div img {
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 20px;
-    
-}
-.home div div:last-child {
-
-  width: 300px;
-  background-color: #ffffff;
-  padding: 20px;
-  
-  border-radius: 0 20px 20px 0;
-  display: inline-block;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
