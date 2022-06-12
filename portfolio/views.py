@@ -25,6 +25,7 @@ def blog_page_view(request):
     context = {'portfolio': post.objects.all()}
     return render(request, 'portfolio/blog.html', context)
 
+
 def projectos_page_view(request):
     context = {'portfolio': projecto.objects.all()}
     return render(request, 'portfolio/projectos.html', context)
