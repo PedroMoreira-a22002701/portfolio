@@ -10,6 +10,7 @@ import base64
 import io
 import urllib
 
+
 from .models import post, PontuacaoQuiz, cadeira, projecto
 from django.shortcuts import render
 from django.http import HttpResponse
