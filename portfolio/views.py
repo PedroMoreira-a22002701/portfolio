@@ -1,11 +1,11 @@
 from imaplib import _Authenticator
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import PostForm
+from .forms import PostForm, Project, Cadeira
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from .models import post, PontuacaoQuiz, cadeira, projecto
-# Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -73,3 +73,22 @@ def pontuacao_quiz(request):
     if(request.POST['4'] == 'border-radius: 30px;'):
         count = count + 1             
     return count
+
+@login_required
+def edit_projects(request):
+    form = Project(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('projectos')
+    context = {'form': form}
+
+    return render(request, 'portfolio/edit_project.html', context)
+@login_required
+def edit_cadeira(request):
+    form = Cadeira(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('licenciatura')
+    context = {'form': form}
+
+    return render(request, 'portfolio/edit_cadeira.html', context)    

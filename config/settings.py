@@ -54,6 +54,8 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = '/portfolio/'
 
+LOGIN_URL = 'portfolio:login'
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [

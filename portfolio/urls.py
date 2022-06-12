@@ -26,5 +26,7 @@ urlpatterns = [
     path('post', views.post_page_view, name='post'),
     path('quiz', views.quizz, name='quiz'),
     path('login', views.login_page_view, name='login'),
+    path('edit_project', views.edit_projects, name='edit_project'),
+    path('edit_cadeira', views.edit_cadeira, name='edit_cadeira'),
     
 ]

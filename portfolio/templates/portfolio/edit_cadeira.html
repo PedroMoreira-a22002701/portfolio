@@ -1,0 +1,17 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block main %}
+<link rel="stylesheet" href="{% static 'portfolio/css/post.css' %}">
+<title>Nova Cadeira</title>
+<div class="post"> 
+        <h3>Nova Cadeira</h3>
+        <br>
+        <form method="POST" action="">
+
+        {% csrf_token %}
+        {{form.as_p}}
+        
+        <input class="button" type="submit" value="Gravar">
+        
+</div>
+{% endblock %}
