@@ -5,6 +5,8 @@ from .forms import PostForm, Project, Cadeira
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+import matplotlib.pyplot as plt
+
 from .models import post, PontuacaoQuiz, cadeira, projecto
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -58,7 +60,8 @@ def quizz(request):
         r = PontuacaoQuiz(nome=n, pontos=p)
         r.save()
         return render(request, 'portfolio/quiz.html')
-    return render(request, 'portfolio/quiz.html')    
+    context = {'data': desenha_grafico_resultados()}    
+    return render(request, 'portfolio/quiz.html',context)    
 
 def pontuacao_quiz(request):
     count = 0
@@ -73,16 +76,30 @@ def pontuacao_quiz(request):
     if(request.POST['4'] == 'border-radius: 30px;'):
         count = count + 1             
     return count
+def desenha_grafico_resultados():
+    pontuacoes = PontuacaoQuiz.objects.all()
+    pontuacao_sorted = sorted(pontuacoes, key=lambda objeto: objeto.pontos, reverse=False)
+    lista_nomes = []
+    lista_pontuacao = []
+
+    for person in pontuacao_sorted:
+        lista_nomes.append(person.nome)
+        lista_pontuacao.append(person.pontos)
+
+    plt.barh(lista_nomes, lista_pontuacao)
+    plt.savefig('portfolio/static/portfolio/images/graf.png', bbox_inches='tight')
 
 @login_required
 def edit_projects(request):
-    form = Project(request.POST or None)
+    form = Project(request.POST, request.FILES or None)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect('projectos')
+        return HttpResponseRedirect(reverse('portfolio:projectos'))
+
     context = {'form': form}
 
     return render(request, 'portfolio/edit_project.html', context)
+    
 @login_required
 def edit_cadeira(request):
     form = Cadeira(request.POST or None)
@@ -92,3 +109,4 @@ def edit_cadeira(request):
     context = {'form': form}
 
     return render(request, 'portfolio/edit_cadeira.html', context)    
+    

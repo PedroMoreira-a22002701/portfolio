@@ -6,13 +6,8 @@
     font-family: 'Poppins', sans-serif;
 }
   
-h1 {
-    font-size: 50px;
-    color: #ffffff;;;
-
-}
-h2 {
- font-size: 20px;
+h2, h3 {
+ font-size: 50px;
  color: rgb(15, 82, 140);
 
 }
@@ -21,7 +16,6 @@ html {
   height: 100%;
   overflow: hidden;
 }
-
 main {
   display: grid;
   background-repeat: no-repeat;
@@ -70,65 +64,43 @@ header {
     height: 5vh;
     display: flex;
     justify-content: flex-end;
-     color: #ffffff;
+    color: #ffffff;
+
     align-items: center;
     position: absolute;
     bottom: 0; 
     left: 0; 
     right: 0;
   }
-.projectos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 50px;
+input[type=text] {
+    width: 30%;
+    padding: 5px 5px;
+    margin: 4px 0;
+    box-sizing: border-box;
 }
-.projectos > div {
-
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px #888888;
-    margin: 10px;
-    opacity: 0.85;
-
-}
-
-.projectos div img {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-}
-
-.projectos div div:last-child {
-
-    width: 300px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 0 20px 20px 0;
-    display: inline-block;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-.buttons{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 30px;
-}
-.buttons button{
-  margin: 0 5px;
+.button {
+  background-color: white;
   height: 40px;
   width: 100px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  border: 1px solid #007bff;
-  transition: all 0.3s ease;
+  color: black;
+  border: 2px solid rgb(15, 82, 140); /* Green */
+  transition-duration: 0.4s;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: rgb(15, 82, 140); /* Green */
+  color: white;
+}
+
+.post {
+  margin: auto;
+  width: 20%;
+  font-size: 30px;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #888888;
+  padding-top: 20px;
+  opacity: 0.9;
+  
 }
