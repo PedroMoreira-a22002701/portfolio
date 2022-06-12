@@ -12,14 +12,18 @@
                     <h2>{{projecto.nome}}</h2>
                     <p>{{projecto.descricao}}</p>
                     <button><a href="{{projecto.github}}">GITHUB</a></button>
+                    <button><a href="{% url 'portfolio:edita_projecto' projecto.id %}">Editar</a></button>
                 </div>
+                
             </div>
             {% endfor %}
             
         </div>
         <div class="buttons">      
             <button class"info box">
-                <a href="{% url 'portfolio:edit_project' %}">Editar</a>
+                <a href="{% url 'portfolio:novo_project' %}">Novo</a>
             </button>
+            
+
         </div>    
 {% endblock %}

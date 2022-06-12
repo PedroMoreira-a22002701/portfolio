@@ -26,7 +26,13 @@ urlpatterns = [
     path('post', views.post_page_view, name='post'),
     path('quiz', views.quizz, name='quiz'),
     path('login', views.login_page_view, name='login'),
-    path('edit_project', views.edit_projects, name='edit_project'),
-    path('edit_cadeira', views.edit_cadeira, name='edit_cadeira'),
-    
+    path('novo_project', views.novo_projects, name='novo_project'),
+    path('novo_cadeira', views.novo_cadeira, name='novo_cadeira'),
+    path('edita_cadeira/<int:cadeira_id>', views.edita_cadeira_view, name='edita_cadeira'),
+    path('apaga_cadeira/<int:cadeira_id>', views.apaga_cadeira_view, name='apaga_cadeira'),
+    path('edita_projecto/<int:projecto_id>', views.edita_projecto_view, name='edita_projecto'),
+    path('apaga_projecto/<int:projecto_id>', views.apaga_projecto_view, name='apaga_projecto'),
+    path('edita_post/<int:post_id>', views.edita_post_view, name='edita_post'),
+    path('apaga_post/<int:post_id>', views.apaga_post_view, name='apaga_post'),
+
 ]

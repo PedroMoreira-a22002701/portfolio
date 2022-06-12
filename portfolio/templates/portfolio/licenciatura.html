@@ -16,13 +16,18 @@
             
             <a>Projecto: {{cadeira.projecto}}</a>
             <a>Review: {{cadeira.review}}</a>
+                  
+                <button class="info box">
+                    <a href="{% url 'portfolio:edita_cadeira' cadeira.id %}">Editar</a>
+                </button>
+            
         </div>
-    
+        
         {% endfor %}
     </div>
     <div class="buttons">      
-        <button class"info box">
-            <a href="{% url 'portfolio:edit_cadeira' %}">Editar</a>
+        <button class="info box">
+            <a href="{% url 'portfolio:novo_cadeira' %}">Novo</a>
         </button>
     </div>    
     

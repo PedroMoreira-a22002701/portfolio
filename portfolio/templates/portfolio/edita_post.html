@@ -1,0 +1,21 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/post.css' %}">   
+
+<div class="post">
+    <h3>Post</h3>
+    <form action="{% url 'portfolio:edita_post' post_id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>
+        <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancelar</a>
+        </button>
+        <input type="submit" value="Gravar" class="btn btn-success" >
+        <button>
+        <a href="{% url 'portfolio:apaga_post' post_id %}" role="button" class="btn btn-danger">Apagar</a>
+        </button>
+    </form>
+<div>
+{% endblock %}
