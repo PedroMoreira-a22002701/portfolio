@@ -1,11 +1,12 @@
 from imaplib import _Authenticator
+import matplotlib.pyplot as plt
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import PostForm, Project, Cadeira
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-import matplotlib.pyplot as plt
+
 import base64
 import io
 import urllib
