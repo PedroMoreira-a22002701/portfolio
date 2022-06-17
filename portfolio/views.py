@@ -89,6 +89,7 @@ def pontuacao_quiz(request):
     if(request.POST['4'] == 'border-radius: 30px;'):
         count = count + 1             
     return count
+
 def desenha_grafico_resultados():
     pontuacoes = PontuacaoQuiz.objects.all().order_by('pontos')
 
@@ -110,6 +111,7 @@ def desenha_grafico_resultados():
     uri = urllib.parse.quote(string)
 
     return uri
+    
 @login_required
 def edita_post_view(request, post_id):
     posts = post.objects.get(id=post_id)
