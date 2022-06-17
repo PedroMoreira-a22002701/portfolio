@@ -11,6 +11,10 @@ h1 {
     color: #ffffff;;;
 
 }
+h2, h3 {
+  font-size: 50px;
+  color: rgb(0, 136, 255);
+}
 html {
   background-size: cover;
   height: 100%;
@@ -110,13 +114,9 @@ header {
   justify-content: center;
   align-items: center;
 }
-.location, .temperature {
-  height: 30vh;
-  width: 50%;
+.time {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center;
-}
-.temperature {
-  flex-direction: column;
+  padding: 50px;
 }
