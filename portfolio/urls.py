@@ -34,5 +34,5 @@ urlpatterns = [
     path('apaga_projecto/<int:projecto_id>', views.apaga_projecto_view, name='apaga_projecto'),
     path('edita_post/<int:post_id>', views.edita_post_view, name='edita_post'),
     path('apaga_post/<int:post_id>', views.apaga_post_view, name='apaga_post'),
-
+    path('logout', views.logout_view, name="logout"),
 ]

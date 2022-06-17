@@ -11,6 +11,10 @@ h1 {
     color: #ffffff;;;
 
 }
+h2, h3 {
+  font-size: 50px;
+  color: rgb(15, 82, 140);
+}
 html {
   background-size: cover;
   height: 100%;
@@ -72,3 +76,39 @@ header {
     left: 0; 
     right: 0;
   }
+.login {
+  margin: auto;
+  width: 60%;
+  font-size: 30px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #888888;
+  padding-top: 20px;
+  opacity: 0.9;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button {
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  color: black;
+  border: 2px solid rgb(15, 82, 140); /* Green */
+  transition-duration: 0.4s;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: rgb(15, 82, 140); /* Green */
+  color: white;
+}

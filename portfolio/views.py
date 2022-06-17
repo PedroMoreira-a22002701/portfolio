@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import PostForm, Project, Cadeira
 from django.urls import reverse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 import base64
@@ -30,6 +30,7 @@ def blog_page_view(request):
 def projectos_page_view(request):
     context = {'portfolio': projecto.objects.all()}
     return render(request, 'portfolio/projectos.html', context)
+ 
 
 def licenciatura_page_view(request):
     context = {'portfolio': cadeira.objects.all()}
@@ -46,7 +47,13 @@ def login_page_view(request):
             return render(request, "portfolio/login.html", {
                 'message': "Invalid credentials."
             })
-    return render(request, 'portfolio/login.html')    
+    return render(request, 'portfolio/login.html')   
+def logout_view(request):
+    logout(request)
+
+    return render(request, 'portfolio/login.html', {
+        'message': 'Desconectado.'
+    })     
     
 def post_page_view(request):
     form = PostForm(request.POST or None)
@@ -152,11 +159,11 @@ def edita_cadeira_view(request, cadeira_id):
     context = {'form': form, 'cadeira_id': cadeira_id}
     return render(request, 'portfolio/edita_cadeira.html', context)
 
-
+@login_required
 def apaga_cadeira_view(request, cadeira_id):
     cadeira.objects.get(id=cadeira_id).delete()
     return HttpResponseRedirect(reverse('portfolio:licenciatura'))
-
+@login_required
 def edita_projecto_view(request, projecto_id):
     projectos = projecto.objects.get(id=projecto_id)
     form = Project(request.POST or None, instance=projectos)
@@ -168,7 +175,7 @@ def edita_projecto_view(request, projecto_id):
     context = {'form': form, 'projecto_id': projecto_id}
     return render(request, 'portfolio/edita_projecto.html', context)
 
-
+@login_required
 def apaga_projecto_view(request, projecto_id):
     projecto.objects.get(id=projecto_id).delete()
     return HttpResponseRedirect(reverse('portfolio:projectos'))
